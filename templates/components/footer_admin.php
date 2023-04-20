@@ -1,0 +1,1 @@
+<footer><p class="email"><a href="mailto:jean.forcheroche@outlook.com">jean.forcheroche@outlook.com</a></p></footer>

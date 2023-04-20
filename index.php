@@ -1,141 +1,115 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog-ecrivain</title>
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> 
-</head>
-<body>
-    <div id="general">
+<?php
+session_start();
+// var_dump($_SESSION);
 
-     </header>
-     <div id="entete">
-            <div class="titre">
-                <h2>Jean Forteroche - Acteur, écrivain</h2>
-            </div>
-    <nav class="onglets">
-        <ul>
-            <li><a href="#">Inscription</a></li>
-            <li><a href="#">Connection</a></li>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Articles</a></li>
-            <li><a href="#">contact</a></li>
-            </ul>
-        </nav>
-    </div>
+//1ère étape les modèles src en haut de page
+//2ème étape création des variables: post ou comments
+//3ème étape mettre le lien de la vue du site "homepage".
 
-</header>
-
-<section>
-    <div id="ecrits">
-        <article>
-            <h3>27/12/2021 - Mon dernier voyage</h3>
-               <figure>
-            <img  class="portfolio1" src="images/milandes.JPG" alt="milandes">
-        </figure>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </article>
-        <br>
-        <!-- Biographie -->
-        <aside>
-            <figure>
-                <img src="images/banniere.jpg" alt="banniere">
-            </figure>
-            <h3 class="titre-biographie">Biographie</h3>
-       
-            <p class="biography">
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-        </aside>
-    </div>
-        <!-- Mettre un commentaire avec formulaires -->
-          <form method="post" action="traitement.php">
-
-          <fieldset>
-              <legend>Ecrivez un commentaire</legend>
-                <textarea name="" id="" cols="30" rows="5"></textarea><br>
-                <label for="pseudo">Identifiant</label>
-                <input type="text" name="pseudo" id="pseudo" placeholder="identifiant"><br>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="email"><br>
-                <input type="submit" id="envoyer" value="Envoyer">
-          </fieldset>
-      </form>
-</section>
-  <!-- transition tiret -->
-<div id="tiret"></div>
-  <!-- Les photos -->
-<section>
-        <!-- <h4 class ="titre2">26/12/2021</h4> <h4 class ="titre2">25/12/2021</h4>  <h4 class ="titre2">24/12/2021</h4>   -->
-         <ul id= "titre2">
-             <li>26/12/2021
-                <figure>
-                <img  class="portfolio" src="images/milandes.JPG" alt="milandes">
-                </figure>
-             </li>
-             <li>25/12/2021
-                <figure>
-                <img class ="portfolio" src="images/paysage-perigord1.JPG" alt="perigord">
-            </figure>
-
-             </li>
-             <li>24/12/2021
-            <figure>
-            <img  class="portfolio" src="images/pissenlits.JPG" alt="pissenlits">
-        </figure>
-             </li>
-        </ul>  
-        
- 
-    
-
-    <div id="photos">
+//Lien vers le fichier controlleur 
+//"homepage_controller.php"
+require_once("src/controllers/pages_controller.php");
+//Lien vers le fichier controlleur "post_controller.php"
+require_once("src/controllers/post_controller.php");
+//Lien vers le fichier controller "user_controller.php"
+require_once("src/controllers/user_controller.php");
+//Lien vers le fichier controller 
+//"commentaires"
+require_once("src/controllers/comment_controller.php");
+//Lien vers le fichier modèle 
+//"post_model.php"
+require_once("src/post_model.php");
+//Lien vers le fichier modèle 
+//"user_model.php"
+require_once("src/user_model.php");
+//Lien vers le ficher modèle "comment_model.php"
+require_once("src/comment_model.php");
 
 
-    <p class="articlesAnciens">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
-    </p>
+//connexion de plusieurs applications
+function middlewareIsLogin($LaunchFonction)
+{
+    if (isset($_SESSION['login']) && $_SESSION['login']) {
+        $LaunchFonction;
+        return true;
+    }
 
-       <p class="articlesAnciens">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
-    </p>
+    //Errors
+    $_SESSION["error"] = "Error, vous n'avez accès à cette page";
+    // Redirection vers affichage des posts(URL)
+    header("Location: http://localhost/mvc-site/index.php?action=login");
 
-       <p class="articlesAnciens">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
-    </p>
+    return false;
+}
 
-
-        <!-- <figure>
-            <img  class="portfolio" src="images/milandes.JPG" alt="milandes">
-        </figure>
-        <figure>
-            <img class ="portfolio" src="images/paysage-perigord1.JPG" alt="perigord">
-        </figure>
-        <figure>
-            <img  class="portfolio" src="images/pissenlits.JPG" alt="pissenlits">
-        </figure> -->
-    </div>
-</section>
-    
-    <!-- Footer -->
-<footer>
-    <div id="basdepage">
-    <ul>
-        <li> <a href="jean.forteroche@gmail.com"><i class="fas fa-envelope-square  fa_custom fa-2x"></i></a></li>
-        <li><a href="https://facebook.com"><i class="fab fa-facebook-f fa_custom fa-2x"></i></a></li>
-        <li><a href="https://twitter.com"><i class="fab fa-twitter fa_custom fa-2x"></i></a></li>
-        <li><a href="https://instagram.com"><i class="fab fa-instagram fa_custom fa-2x"></i></a></li>
-        <li><a href="https://telegram.com"><i class="fab fa-telegram fa_custom fa-2x"></i></a></li>
-    </ul>
-    </div>
-
-
-
-</footer>
-
-</div>
-</body>
-</html>
+// variable 'action' existe et non vide
+if (isset($_GET['action']) && $_GET['action'] !== '') {
+    //---Si $_GET["action] == posts
+    if ($_GET['action'] === 'posts') {
+        //Lancer la fonction postController_showPost()   
+        middlewareIsLogin(postController_showPosts());
+    } elseif ($_GET['action'] === 'test') {
+        //Lancer la fonction postController_showPost()   
+        test();
+    }
+    //$_GET["action"] == "post"-- Si GET[id] existe,liée à l'id Msql
+    elseif ($_GET['action'] === 'post' && isset($_GET['id'])) {
+        //Lancer la fonction postController_showOnePost() 
+        postController_showOnePost($_GET['id']);
+    }
+    //Si $_GET["action"] === à "showFormPost"
+    elseif ($_GET["action"] === "showFormPost") {
+        //Lancer la fonction postController_showFormPost 
+        postController_showFormPost();
+    }
+    //Si $_GET["action"] === à la chaine "modify_Post"
+    elseif ($_GET["action"] === "modify_Post" && isset($_GET['id'])) {
+        postController_modifyPost($_GET['id']);
+    } elseif ($_GET["action"] === "form_modify_Post" && isset($_GET['id'])) {
+        postController_showFormModifyPost($_GET['id']);
+    }
+    //Si $_GET["action"] === à "add_post"
+    elseif ($_GET["action"] === "add_post") {
+        //Lancer la fonction postController_addPost 
+        middlewareIsLogin(postController_addPost());
+    }
+    //Supprimer un post
+    elseif ($_GET["action"] === "cancel_post" && isset($_GET['id'])) {
+        postController_cancelPost($_GET['id']);
+    }
+    //Si $_GET["action"] === "signup"
+    elseif ($_GET["action"] === "signup") {
+        //Lancer la fonction userController_signupUser()
+        userController_signupUser();
+    }
+    //Si $_GET["action"] === "login"
+    elseif ($_GET["action"] === "login") {
+        //Lancer la fonction userController_loginUser()
+        userController_loginUser();
+    } elseif ($_GET["action"] === "logout") {
+        //Lancer la fonction userController_loginUser()
+        userController_deconnexion();
+    } elseif ($_GET["action"] === "dashboard") {
+        //Lancer userController_TableauDeBord
+        middlewareIsLogin(userController_TableauDeBord());
+    } elseif ($_GET["action"] === "signal_Comments" && isset($_GET["comment_id"]) && isset($_GET["post_id"])) {
+        //Lancer commentController_signalComments
+        middlewareIsLogin(commentController_signalComments($_GET["comment_id"], $_GET["post_id"]));
+    } elseif ($_GET["action"] === "add_Comments") {
+        //Lancer commentController_addComments
+        commentController_addComments();
+    } elseif ($_GET["action"] === "cancel_signal_Comments" && isset($_GET["comment_id"])) {
+        commentController_cancel_signalComments($_GET["comment_id"]);
+    } elseif ($_GET["action"] === "show_Comments") {
+        //Lancer commentController_showComment
+        middlewareIsLogin(commentController_showComment());
+    } elseif ($_GET["action"] === "cancel_Comments" && isset($_GET['comment_id'])) {
+        // var_dump($_GET['comment_id']);
+        middlewareIsLogin(commentController_deleteComment($_GET['comment_id']));
+    } else {
+        echo "Erreur 404: La page voulue n'existe pas.";
+    }
+} else {
+    //Retour vers index.php
+    pagesController_homepage();
+}

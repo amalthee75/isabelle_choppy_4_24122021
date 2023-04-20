@@ -1,0 +1,394 @@
+/*Sélection des polices */
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Edu+NSW+ACT+Foundation&family=Rubik&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Edu+NSW+ACT+Foundation&family=Lobster&family=Rubik&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Alkatra", cursive;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-family: "Rubik", sans-serif;
+  background-color: beige;
+}
+
+/*En tête */
+
+header {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+  z-index: 3;
+}
+
+header h1 {
+  font-family: "Lobster", cursive;
+}
+
+header .onglets {
+  margin-top: 26px;
+}
+
+header .onglets a {
+  text-decoration: none;
+  color: rgb(92, 95, 92);
+  margin-right: 10px;
+}
+
+/* biographie */
+
+#bio_author {
+  margin-top: 150px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#bio_author .biographie {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+#bio_author .biographie .left img {
+  margin-top: 35px;
+  margin-left: 15px;
+  width: 150px;
+  border-radius: 50%;
+}
+#bio_author .biographie .right {
+  max-width: 60%;
+  margin-left: 30px;
+  margin-right: 40px;
+}
+#bio_author .biographie .right h5 {
+  font-size: 18px;
+}
+
+#bio_author .biographie .right #bio_author .biographie .right p.description {
+  color: rgb(53, 50, 50);
+  text-align: justify;
+  margin-top: -10px;
+  margin-left: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/*articles*/
+.articles {
+  margin-top: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.articles .article {
+  margin: auto;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  width: 70%;
+}
+
+.articles .article .date {
+  margin-left: 15px;
+  color: grey;
+}
+
+.articles .article h5 {
+  font-size: 18px;
+  margin-top: 13px;
+  margin-left: 20px;
+}
+
+.articles .article .description {
+  margin-left: 15px;
+  margin-top: -10px;
+  color: rgb(53, 50, 50);
+  text-align: justify;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.articles .article .auteur {
+  margin-top: -10px;
+  margin-left: 15px;
+}
+
+/*bouton suite*/
+
+#suite {
+  z-index: 1;
+  margin-top: 140px;
+  width: 150px;
+  height: 35px;
+  background-color: rgba(202, 166, 19, 0.4);
+  color: white;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+#suite a {
+  color: rgb(58 49 12);
+  text-decoration: none;
+}
+
+/*Actualisation des commentaires*/
+
+.coms {
+  padding-top: 30px;
+}
+
+.form form-control {
+  margin: auto;
+}
+
+.form.form-control {
+  padding-top: 10px;
+  margin-top: 30px;
+}
+textarea {
+  resize: inline;
+}
+
+/*footer*/
+footer {
+  margin-bottom: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: beige;
+}
+
+footer h5 {
+  width: 180px;
+  color: black;
+}
+
+.social-media {
+  margin-top: 15px;
+}
+.social-media a {
+  color: black;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/*Mise en page posts*/
+
+#contenu2 {
+  margin: auto;
+  margin-top: 100px;
+  max-width: 90%;
+  background-color: burlywood;
+}
+
+span {
+  margin-top: 20px;
+  margin-left: 44%;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/*tableau de bord*/
+
+#contenu2 .article {
+  margin-top: -20px;
+  margin-left: -10px;
+  padding: 10px;
+  padding-top: 12px;
+  background-color: #fff;
+  font-weight: bolder;
+  font-size: 18px;
+  color: #000;
+  width: 520px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#contenu2 .main_container #title {
+  border: 3px solid black;
+  border-style: inset;
+  width: 400px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+#contenu2 .pseudo {
+  /* text-align: center; */
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.supprimer {
+  height: 35px;
+  width: 130px;
+  text-decoration: none;
+  margin-left: 40%;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bolder;
+  background-color: beige;
+}
+
+.supprimer a {
+  text-decoration: none;
+  color: black;
+}
+
+#contenu2 .comment {
+  text-align: center;
+  margin-top: -65px;
+  margin-left: 100px;
+  background-color: #fff;
+  width: 600px;
+}
+
+#contenu2 h2 {
+  text-align: center;
+}
+
+/*formulaire*/
+.form {
+  margin-left: 20%;
+  margin-top: 150px;
+  max-width: 600px;
+}
+
+#title {
+  height: 35px;
+  width: 150px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 16px;
+}
+#envoyer {
+  height: 35px;
+  width: 135px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+  background-color: burlywood;
+}
+
+input.form.form-control {
+  border-radius: 5px;
+}
+
+input.btn.btn-primary {
+  height: 35px;
+  width: 200px;
+  background-color: #0d6efd;
+  color: #fff;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+/*tableau de bord*/
+
+/*header*/
+
+#contenu2 h3 {
+  border: 3px solid black;
+  border-style: inset;
+  width: 400px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.cadre {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.title_dashboard {
+  /* margin-left: -21px; */
+  padding-top: 15px;
+  color: black;
+  margin-left: 5%;
+  width: 120px;
+}
+
+.list-dashboard {
+  margin-top: 50px;
+  margin-left: 2%;
+}
+
+.link_dashboard {
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bolder;
+  color: black;
+  z-index: 2;
+  text-decoration: none;
+}
+
+/*Formulaire de connexion */
+#form_connexion {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: auto; */
+  width: max-content;
+}
+#div_form {
+  border: 1px solid black;
+  background-color: rgb(94, 94, 84);
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#div_form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#form-connexion {
+  z-index: 1;
+}
+#div_form #email,
+#div_form #password {
+  /* margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px; */
+  width: 230px;
+  height: 45px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#div_form #connect {
+  width: 80px;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+div.main_container {
+  margin-top: 100px;
+  min-height: calc(100vh - 160px);
+}
+/*Messages de confirmation et d'erreur*/
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}

@@ -13,7 +13,7 @@ function userController_signupUser()
     //[Ce que je lis] : Initialisation de la variable $title avec comme valeur "Signup" -- "A quoi ça sert : Correspond au titre h1 de la page user_form.php"
     $title = "Signup";
     //création de l'url automatique pour poster le formulaire
-    $formAction = "http://localhost/mvc-site/index.php?action=signup";
+    $formAction = "http://localhost/isabelle_choppy_4_24122021/index.php?action=signup";
 
     var_dump($title, $formAction);
 
@@ -24,7 +24,7 @@ function userController_loginUser()
 {
     // $userModel = new User();
     if (isset($_SESSION['login']) && $_SESSION['login']) {
-        header("Location: http://localhost/mvc-site/index.php?action=dashboard");
+        header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=dashboard");
         return true;
     }
 
@@ -44,7 +44,7 @@ function userController_loginUser()
             var_dump($_SESSION);
 
             $_SESSION["success"] = "Connexion réussie";
-            header("Location: http://localhost/mvc-site/index.php?action=dashboard");
+            header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=dashboard");
         } else {
             //Si non -> Message d'erreur sur le HTML "Le mot de passe ou(et) l'email est incorrect)
             $_SESSION["error"] = "Le mot de passe et/ou l'email est incorrect";
@@ -52,7 +52,7 @@ function userController_loginUser()
     }
 
     $title = "Login";
-    $formAction = "http://localhost/mvc-site/index.php?action=login";
+    $formAction = "http://localhost/isabelle_choppy_4_24122021/index.php?action=login";
 
     // var_dump($title, $formAction);
 
@@ -73,11 +73,10 @@ function userController_deconnexion()
     // Finalement, on détruit la session.
     session_destroy();
     //Redirection ver login
-    header("Location: http://localhost/mvc-site/index.php?action=login");
+    header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=login");
 
     // }
 }
-
 
 function userController_TableauDeBord()
 {
@@ -90,9 +89,4 @@ function userController_TableauDeBord()
 
     require 'templates/tableau_de_bord.php';
     return;
-
-    // } 
-
-    // header("Location: http://localhost/mvc-site/index.php?action=login");
-
 }

@@ -43,8 +43,6 @@ class Post extends Model
         } else {
             return false;
         }
-        // var_dump($title, $content);
-        // exit;
     }
 
     public function postModel_cancelPost($id)

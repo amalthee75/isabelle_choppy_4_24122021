@@ -6,7 +6,7 @@ function postController_showPosts()
     $postsModel->postModel_getAllPosts();
     $_SESSION["success"] = "<p>Voici tous les posts</p>";
 
-    header('Location: http://localhost/mvc-site/templates/homepage_blog.php');
+    header('Location: http://localhost/isabelle_choppy_4_24122021/templates/homepage_blog.php');
     // $posts = postModel_getAllPosts($database);
 
 }
@@ -22,7 +22,7 @@ function postController_showOnePost($id)
     //Si la variable $item est nul
     if (!$item) {
         // Redirection vers l'index.php 
-        header('Location: http://localhost/mvc-site/index.php');
+        header('Location: http://localhost/isabelle_choppy_4_24122021/index.php');
         // exits 
         exit();
     }
@@ -66,18 +66,18 @@ function postController_addPost()
             //SUCCESS
             $_SESSION["success"] = "Le post a bien été ajouté";
 
-            header("Location: http://localhost/mvc-site/index.php?action=dashboard");
+            header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=dashboard");
             return;
         } else {
             //Errors
             $_SESSION["error"] = "Erreur, les champs sont vide !";
-            header("Location: http://localhost/mvc-site/index.php?action=showFormPost");
+            header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=showFormPost");
             return;
         }
     }
     //ERROR
     $_SESSION["error"] = "Erreur, pas de formulaire envoyé !";
-    header("Location: http://localhost/mvc-site/index.php?action=showFormPost");
+    header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=showFormPost");
 }
 
 function postController_showFormModifyPost($id)
@@ -91,7 +91,7 @@ function postController_showFormModifyPost($id)
     } else {
         //Errors
         $_SESSION["error"] = "Le post n'existe pas";
-        header("Location: http://localhost/mvc-site/index.php?action=dashboard");
+        header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=dashboard");
     }
 }
 
@@ -107,12 +107,12 @@ function postController_modifyPost($id)
         } else {
             $_SESSION['success'] = "Pas de modification, aucun changement";
         }
-        header("Location: http://localhost/mvc-site/index.php?action=form_modify_Post&id=$id");
+        header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=form_modify_Post&id=$id");
         return;
     }
     //ERROR
     $_SESSION["error"] = "Erreur, pas de formulaire envoyé !";
-    header("Location: http://localhost/mvc-site/index.php?action=dashboard");
+    header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=dashboard");
 }
 
 function postController_cancelPost($id)
@@ -123,5 +123,5 @@ function postController_cancelPost($id)
     $suppression = $Post->postModel_cancelPost($id);
 
 
-    header("Location: http://localhost/mvc-site/index.php?action=dashboard");
+    header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=dashboard");
 }

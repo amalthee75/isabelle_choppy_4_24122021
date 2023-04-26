@@ -205,7 +205,7 @@ span {
   font-weight: bolder;
   font-size: 18px;
   color: #000;
-  width: 520px;
+  width: 450px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -311,7 +311,7 @@ input.btn.btn-primary {
 }
 
 .title_dashboard {
-  /* margin-left: -21px; */
+  grid-row-end: auto;
   padding-top: 15px;
   color: black;
   margin-left: 5%;
@@ -326,7 +326,6 @@ input.btn.btn-primary {
 .link_dashboard {
   margin-top: 40px;
   padding-left: 10px;
-  padding-right: 10px;
   font-weight: bolder;
   color: black;
   z-index: 2;

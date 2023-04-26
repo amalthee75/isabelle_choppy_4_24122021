@@ -1,8 +1,8 @@
 <header>
     <h1>Blog - Jean Forcheroche</h1>
     <div class="onglets">
-        <a href="http://localhost/mvc-site/index.php">Accueil</a>
-        <a href="http://localhost/mvc-site/index.php?action=login">Connexion</a>
+        <a href="index.php">Accueil</a>
+        <a href="index.php?action=login">Connexion</a>
 
     </div>
 </header>

@@ -10,7 +10,7 @@ function commentController_showComment()
   $listComments = $commentModel->getAllComments();
 
   if (!$listComments) {
-    header('Location: http://localhost/mvc-site/index.php');
+    header('Location: http://localhost/isabelle_choppy_4_24122021/index.php');
     exit();
   }
 
@@ -24,7 +24,7 @@ function commentController_signalComments($comment_id, $post_id)
   $signalComment = $commentModel->commentModel_signalComment($comment_id);
 
   if ($signalComment) {
-    header("Location: http://localhost/mvc-site/index.php?action=post&id=" . $post_id);
+    header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=post&id=" . $post_id);
   }
 }
 
@@ -41,7 +41,7 @@ function commentController_cancel_signalComments($comments_id)
   }
 
 
-  header("Location: http://localhost/mvc-site/index.php?action=show_Comments");
+  header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=show_Comments");
 }
 
 function commentController_addComments()
@@ -67,7 +67,7 @@ function commentController_addComments()
     }
   }
 
-  header("Location: http://localhost/mvc-site/index.php?action=post&id=" . $_POST["item_id"]);
+  header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=post&id=" . $_POST["item_id"]);
 }
 
 function commentController_deleteComment($comment_id)
@@ -80,8 +80,8 @@ function commentController_deleteComment($comment_id)
     // var_dump($comments);
     $_SESSION["success"] = "Commentaires supprimés";
   } else {
-    $_SESSION["error"] = "Erreur : de suppréssion du commentaire";
+    $_SESSION["error"] = "Erreur : de suppression du commentaire";
   }
 
-  header("Location: http://localhost/mvc-site/index.php?action=show_Comments");
+  header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=show_Comments");
 }

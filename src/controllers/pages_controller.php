@@ -18,27 +18,8 @@ function pagesController_homepage()
     $PostModel = new Post();
     $posts = $PostModel->postModel_getAllPosts();
 
-
-    // exit();
-
-    // $database = connexion_db();
-    // $posts = postModel_getAllPosts($database);
-    // var_dump($posts);
-
     require 'templates/homepage_blog.php';
 }
 
-// $posts = getAllPosts();
-// // var_dump($posts);
-
-// $post = getOnePost();
-// var_dump($post);
-
-// $comments = getAllCommentsByPost();
-// var_dump($comments);
-
-// var_dump(getAllCommentsByPost());
-// var_dump(getAllPosts());
-// var_dump(getOnePost());
 
 //Doit toujours être en fin de page pour prendre en compte les variables $posts, $post et $comments

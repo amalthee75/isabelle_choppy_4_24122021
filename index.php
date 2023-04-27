@@ -37,7 +37,7 @@ function middlewareIsLogin($LaunchFonction)
     //Errors
     $_SESSION["error"] = "Error, vous n'avez accès à cette page";
     // Redirection vers affichage des posts(URL)
-    header("Location: http://localhost/mvc-site/index.php?action=login");
+    header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=login");
 
     return false;
 }

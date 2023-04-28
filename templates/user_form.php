@@ -17,10 +17,13 @@
     <div class="main_container">
         <?php include('components/message.php') ?>
         <!-- Afficher la variable $title dans un h1  -->
-        <h1><?php echo $title; ?></h1>
+
 
         <!-- Ajouter la valeur de la variable $formAction à l'attribue action de la balise form  -->
         <form id="form_connexion" action="<?php echo $formAction; ?>" method="POST">
+
+            <h1><?php echo $title; ?></h1>
+
             <div id="div_form">
                 <div>
                     <input name="email" type="email" id="email" placeholder="email">

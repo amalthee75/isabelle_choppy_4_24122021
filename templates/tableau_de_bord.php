@@ -16,34 +16,42 @@
 
 
   <section id="contenu2">
+
     <div class="main_container">
 
       <h3>LISTE DES ARTICLES</h3>
 
-      <!-- <?php foreach ($posts as $post) { ?> -->
+    </div>
+    </div>
+
+    <?php foreach ($posts as $post) { ?>
 
       <!-- Mettre le html + les variables -->
+      <div id="cadre">
+        <div id="header_cadre">
+          <h5 class="title_dashboard"><?= htmlspecialchars($post['title']); ?></h5>
+          <p class="date_dashboard"><?= htmlspecialchars($post['date_creation']); ?></p>
+          <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=cancel_post&id=<?= $post['id'] ?>" onclick="return confirm('Confirmer la suppression');">Supprimer</a>
+          <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=form_modify_Post&id=<?= $post['id'] ?>">modifier</a>
 
-      <div class="cadre">
-
-
-        <h5 class="title_dashboard"><?= htmlspecialchars($post['title']); ?> <br> <?= htmlspecialchars($post['date_creation']); ?></h5>
-
+        </div>
         <article class=" list-dashboard">
           <p class="article"><?= htmlspecialchars($post['content']); ?></p>
         </article>
-        <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=cancel_post&id=<?= $post['id'] ?>" onclick="return confirm('Confirmer la suppression');">Supprimer</a>
-        <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=form_modify_Post&id=<?= $post['id'] ?>">modifier</a>
 
       </div>
-
+      <!-- <div id="sous-cadre2">
+          <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=cancel_post&id=<?= $post['id'] ?>" onclick="return confirm('Confirmer la suppression');">Supprimer</a>
+          <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=form_modify_Post&id=<?= $post['id'] ?>">modifier</a>
+        </div> -->
+      </div>
 
       <!-- <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=add_Comments=<?= $post['id'] ?>">Signaler</a>
 
       <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=add_Comments" onclick="return confirm('commentaire signalé');"> Signaler</a>
 
       <?php
-            }
+    }
       ?> -->
 
 

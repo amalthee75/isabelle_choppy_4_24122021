@@ -11,6 +11,16 @@ body {
   background-color: beige;
 }
 
+/*div globale*/
+
+div.main_container {
+  margin-top: 100px;
+  min-height: calc(100vh - 160px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
 /*En tête */
 
 header {
@@ -199,15 +209,15 @@ span {
 #contenu2 .article {
   margin-top: -20px;
   margin-left: -10px;
-  padding: 10px;
-  padding-top: 12px;
+  padding: 15px;
+  text-align: justify;
   background-color: #fff;
-  font-weight: bolder;
-  font-size: 18px;
+  font-size: 14px;
   color: #000;
+  border-radius: 5px;
   width: 450px;
-  overflow: hidden;
-  white-space: nowrap;
+  height: 50px;
+  overflow: auto;
 }
 #contenu2 .main_container #title {
   border: 3px solid black;
@@ -305,40 +315,59 @@ input.btn.btn-primary {
   padding-top: 20px;
 }
 
-.cadre {
-  display: flex;
-  justify-content: flex-start;
+#cadre {
+  width: 500px;
+  height: 300px;
+  background-color: pink;
 }
 
-.title_dashboard {
-  grid-row-end: auto;
-  padding-top: 15px;
+#header_cadre {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#header_cadre .title_dashboard {
   color: black;
-  margin-left: 5%;
-  width: 120px;
+  margin-left: 10px;
+}
+
+.date_dashboard {
+  color: black;
+  margin-left: 10px;
+  width: 100px;
 }
 
 .list-dashboard {
-  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 100px;
+  margin-top: 30px;
   margin-left: 2%;
 }
 
 .link_dashboard {
-  margin-top: 40px;
-  padding-left: 10px;
+  margin-top: 20px;
+  padding-left: 100px;
+  padding-right: -50px;
   font-weight: bolder;
   color: black;
-  z-index: 2;
   text-decoration: none;
+  font-size: 14px;
 }
 
 /*Formulaire de connexion */
 #form_connexion {
-  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
-  /* margin: auto; */
   width: max-content;
+}
+
+#form_connexion h1 {
+  text-transform: capitalize;
 }
 #div_form {
   border: 1px solid black;
@@ -378,10 +407,6 @@ input.btn.btn-primary {
   font-size: 16px;
 }
 
-div.main_container {
-  margin-top: 100px;
-  min-height: calc(100vh - 160px);
-}
 /*Messages de confirmation et d'erreur*/
 
 .success {
@@ -390,4 +415,13 @@ div.main_container {
 
 .error {
   color: red;
+}
+
+/*responsive*/
+
+@media screen and (max-width: 1185px) {
+  .cadre {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

@@ -51,7 +51,7 @@ function userController_loginUser()
         }
     }
 
-    $title = "Login";
+    $title = "LOGIN";
     $formAction = "http://localhost/isabelle_choppy_4_24122021/index.php?action=login";
 
     // var_dump($title, $formAction);

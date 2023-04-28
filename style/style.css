@@ -18,7 +18,7 @@ div.main_container {
   min-height: calc(100vh - 160px);
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: column;
 }
 
 /*En tête */
@@ -304,6 +304,11 @@ input.btn.btn-primary {
 /*tableau de bord*/
 
 /*header*/
+
+#container_articles {
+  display: flex;
+  justify-content: center;
+}
 
 #contenu2 h3 {
   border: 3px solid black;

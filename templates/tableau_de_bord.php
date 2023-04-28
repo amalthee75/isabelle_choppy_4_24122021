@@ -35,6 +35,7 @@
           <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=form_modify_Post&id=<?= $post['id'] ?>">modifier</a>
 
         </div>
+
         <article class=" list-dashboard">
           <p class="article"><?= htmlspecialchars($post['content']); ?></p>
         </article>

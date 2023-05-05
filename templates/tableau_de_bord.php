@@ -30,10 +30,14 @@
             <div id="header_cadre">
               <h5 class="title_dashboard"><?= htmlspecialchars($post['title']); ?></h5>
               <p class="date_dashboard"><?= htmlspecialchars($post['date_creation']); ?></p>
+            </div>
+            <div id="header_cadre2">
               <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=cancel_post&id=<?= $post['id'] ?>" onclick="return confirm('Confirmer la suppression');">Supprimer</a>
               <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=form_modify_Post&id=<?= $post['id'] ?>">modifier</a>
-
             </div>
+
+
+
 
             <div class=" list-dashboard">
               <p class="article"><?= htmlspecialchars($post['content']); ?></p>

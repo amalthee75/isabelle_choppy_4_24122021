@@ -9,6 +9,7 @@
          <a href="http://localhost/isabelle_choppy_4_24122021/index.php?action=show_Comments">COMMENTAIRES</a>
 
      </div>
+     <i class="fa-solid fa-bars fa-2x"></i>
  </header>
 
  <div id="message">

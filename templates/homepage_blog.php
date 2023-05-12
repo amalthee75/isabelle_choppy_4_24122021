@@ -42,5 +42,14 @@
     <?php include("components/footer.php"); ?>
 
 </body>
+<script>
+    const menuHamburger = document.querySelector(".fa-solid");
+    const header = document.querySelector("header");
+    const onglets = document.querySelector(".onglets");
+    menuHamburger.addEventListener("click", () => {
+        header.classList.toggle('mobile-menu');
+    })
+</script>
+
 
 </html>

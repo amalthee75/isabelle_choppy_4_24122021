@@ -48,6 +48,12 @@ header .onglets a {
   color: rgb(92, 95, 92);
   margin-right: 10px;
 }
+header i.fa-solid {
+  margin-top: 26px;
+  color: black;
+  display: none;
+}
+
 #message {
   margin-top: 100px;
 }
@@ -63,9 +69,6 @@ header .onglets a {
 #bio_author .biographie {
   background-color: white;
   display: flex;
-  flex-wrap: wrap;
-  margin-top: -50px;
-  margin-bottom: 30px;
   text-align: justify;
 }
 #bio_author .biographie .left {
@@ -234,8 +237,6 @@ span {
   font-size: 14px;
   color: #000;
   border-radius: 5px;
-  width: 450px;
-  height: 170px;
   padding: 10px;
 }
 #contenu2 .main_container #title {
@@ -347,38 +348,38 @@ input.btn.btn-primary {
 
 #cadre {
   width: 49%;
-  /* flex-direction: row; */
-  /* flex-wrap: wrap; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
   background-color: rgb(201, 147, 21);
-  /* align-content: center;
-  gap: inherit; */
 }
 
 #header_cadre {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 50px;
   justify-content: center;
   flex-wrap: wrap;
-  z-index: 1;
+  gap: 20px;
 }
 #header_cadre2 {
   display: flex;
   align-items: center;
-  margin-right: 20px;
-  width: 200px;
   height: 50px;
+  padding-top: 10px;
 }
 
 #header_cadre .title_dashboard {
   color: black;
+  margin-top: 35px;
+  padding-right: 20px;
+  font-size: 20px;
 }
 
 .date_dashboard {
   margin-top: 20px;
-  margin-left: 20px;
+
   color: black;
   width: 100px;
   font-weight: bold;
@@ -387,7 +388,7 @@ input.btn.btn-primary {
 .list-dashboard {
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
+  width: 100%;
 }
 
 .link_dashboard {
@@ -458,9 +459,32 @@ input.btn.btn-primary {
 
 /*responsive*/
 
-@media screen and (max-width: 1185px) {
-  .cadre {
+/*header*/
+
+@media screen and (max-width: 900px) {
+  header {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
+    transition: all 0.5s ease;
+  }
+  header h1 {
+    font-size: 20px;
+    margin-top: 35px;
+  }
+  header .onglets {
+    margin-top: 0;
+    display: none;
+  }
+  header i.fa-solid {
+    color: black;
+    display: block;
+  }
+  .mobile-menu .onglets {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    flex-direction: column;
   }
 }

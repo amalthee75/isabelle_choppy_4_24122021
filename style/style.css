@@ -13,45 +13,67 @@ body {
 
 /*div globale*/
 
-/* div.main_container {
-  margin-top: 100px;
+div.main_container {
+  margin-top: 50px;
   min-height: calc(100vh - 160px);
   border-radius: 10px;
-  display: flex;
-  justify-content: column;
-} */
+  /* display: flex;
+  justify-content: column; */
+}
 
 /*En tête */
 
 header {
-  position: fixed;
-  top: 0;
-  height: 100px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   background-color: white;
-  z-index: 3;
 }
-
 header h1 {
   font-family: "Lobster", cursive;
+  font-size: 2rem;
 }
 
-header .onglets {
-  margin-top: 26px;
+li {
+  list-style: none;
 }
-
-header .onglets a {
-  text-decoration: none;
-  color: rgb(92, 95, 92);
-  margin-right: 10px;
-}
-header i.fa-solid {
-  margin-top: 26px;
+a {
   color: black;
+  text-decoration: none;
+}
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  font-size: 20px;
+  transition: 0.7s ease;
+}
+.nav-link:hover {
+  font-weight: bolder;
+}
+
+.hamburger {
   display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.2 ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: black;
 }
 
 #message {
@@ -61,7 +83,6 @@ header i.fa-solid {
 /* biographie */
 
 #bio_author {
-  margin-top: 150px;
   margin-left: 40px;
   margin-right: 40px;
 }
@@ -77,6 +98,7 @@ header i.fa-solid {
 #bio_author .biographie .right h6 {
   text-align: center;
   font-size: 18px;
+  height: 5px;
 }
 #bio_author .biographie .left img {
   margin-top: 35px;
@@ -103,7 +125,7 @@ header i.fa-solid {
 
 /*articles*/
 .articles {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 40px;
   margin-right: 40px;
 }
@@ -126,6 +148,9 @@ header i.fa-solid {
   margin-top: 13px;
   margin-left: 20px;
 }
+.articles .article h5 a {
+  text-decoration: none;
+}
 
 .articles .article .description {
   margin-left: 15px;
@@ -139,7 +164,7 @@ header i.fa-solid {
 
 .articles .article .auteur {
   margin-top: -10px;
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 /*bouton suite*/
@@ -407,6 +432,7 @@ input.btn.btn-primary {
 }
 
 #form_connexion h1 {
+  margin-top: 200px;
   text-transform: capitalize;
 }
 #div_form {
@@ -486,5 +512,59 @@ input.btn.btn-primary {
     justify-content: center;
     margin-top: 60px;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1022px) {
+  .nav-menu {
+    margin-top: 37px;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  /*header*/
+  .hamburger {
+    display: block;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  .hamburger.active .bar:nth-chid(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY() rotate();
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY() rotate();
+  }
+  .nav-menu {
+    position: absolute;
+    top: 40px;
+    gap: 0;
+    flex-direction: column;
+    background-color: white;
+    margin-left: 150px;
+    text-align: center;
+    transition: 0.2s;
+  }
+  .nav-link {
+    padding-right: 10px;
+  }
+
+  /*body*/
+
+  #div_form {
+    display: flex;
+    flex-direction: column;
+  }
+  #div_form #email {
+    width: 180px;
+  }
+  #div_form #password {
+    width: 180px;
+  }
+  #form_connexion h1 {
+    text-align: center;
   }
 }

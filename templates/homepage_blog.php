@@ -31,7 +31,13 @@
             <?php foreach ($posts as $post) { ?>
                 <article class="article">
                     <p class="date"><?= $post["date_creation"] ?></p>
-                    <h5><a href="http://localhost/mvc-site/index.php?action=form_modify_Post&id=19"><?= $post["title"] ?></a></h5>
+                    <h5>
+                        <a href="http://localhost/mvc-site/index.php?action=post&id=22g">
+                            <!-- <a href="http://localhost/mvc-site/index.php?action=form_modify_Post&id=19"> -->
+
+
+                            <?= $post["title"] ?></a>
+                    </h5>
                     <p class="description"><?= $post["content"] ?></p>
                     <p class="auteur">Jean Forteroche</p>
                 </article>
@@ -42,14 +48,5 @@
     <?php include("components/footer.php"); ?>
 
 </body>
-<script>
-    const menuHamburger = document.querySelector(".fa-solid");
-    const header = document.querySelector("header");
-    const onglets = document.querySelector(".onglets");
-    menuHamburger.addEventListener("click", () => {
-        header.classList.toggle('mobile-menu');
-    })
-</script>
-
 
 </html>

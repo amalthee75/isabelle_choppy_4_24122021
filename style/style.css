@@ -522,7 +522,7 @@ input.btn.btn-primary {
   }
 }
 
-@media screen and (max-width: 665px) {
+@media screen and (max-width: 850px) {
   /*header*/
   .hamburger {
     display: block;
@@ -542,6 +542,7 @@ input.btn.btn-primary {
     position: absolute;
     top: 40px;
     gap: 0;
+    padding: 2px;
     flex-direction: column;
     background-color: white;
     margin-left: 150px;

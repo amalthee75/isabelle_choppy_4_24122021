@@ -1,10 +1,4 @@
 <header>
-    <!-- <h1>Blog - Jean Forcheroche</h1> -->
-    <!-- <div class="onglets">
-        <a href="index.php">Accueil</a>
-        <a href="index.php?action=login">Connexion</a>
-    </div>
-    <i class="fa-solid fa-bars fa-2x"></i> -->
     <nav class="navbar">
         <h1>Blog - Jean Forcheroche</h1>
         <ul class="nav-menu">

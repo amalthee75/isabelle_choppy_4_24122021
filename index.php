@@ -52,7 +52,7 @@ if (isset($_GET['action']) && $_GET['action'] !== '') {
         //Lancer la fonction postController_showPost()   
         test();
     }
-    //$_GET["action"] == "post"-- Si GET[id] existe,liée à l'id Msql
+    //$_GET["action"] == "post"-- Si GET[id] existe,liée à l'id Mysql
     elseif ($_GET['action'] === 'post' && isset($_GET['id'])) {
         //Lancer la fonction postController_showOnePost() 
         postController_showOnePost($_GET['id']);

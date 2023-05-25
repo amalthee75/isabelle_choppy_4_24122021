@@ -1,15 +1,4 @@
  <header>
-     <!-- <h1>Jean Forcheroche Blog</h1>
-     <div class="onglets">
-         <a href="http://localhost/isabelle_choppy_4_24122021/index.php">HOME</a>
-         <a href="http://localhost/isabelle_choppy_4_24122021/index.php?action=logout">DECONNECTION</a>
-         <a href="http://localhost/isabelle_choppy_4_24122021/index.php?action=dashboard">TABLEAU DE BORD</a>
-
-         <a href="http://localhost/isabelle_choppy_4_24122021/index.php?action=showFormPost">AJOUTER UN POST</a>
-         <a href="http://localhost/isabelle_choppy_4_24122021/index.php?action=show_Comments">COMMENTAIRES</a>
-
-     </div>
-     <i class="fa-solid fa-bars fa-2x"></i> -->
      <nav class="navbar">
          <h1>Blog - Jean Forcheroche</h1>
          <ul class="nav-menu">

@@ -23,20 +23,24 @@
                 if ($listComments) {
                     foreach ($listComments as $listComment) {
                 ?>
-                        <h5 class="pseudo"><?= htmlspecialchars($listComment["id"]) . ' ' . htmlspecialchars($listComment["pseudo"]); ?></h5><br>
-                        <p class="comment"><?= htmlspecialchars($listComment["commentaire"]) ?></p>
-                        <button type="submit" class=supprimer><a href="http://localhost/mvc-site/index.php?action=cancel_Comments&comment_id=<?= $listComment["id"] ?>" onclick=" return confirm('Confirmer la suppression');">Supprimer</a></button>
-                        <!-- bouton signaler -->
-                        <?php if ($listComment["signaler"] == 1) { ?>
-                            <span>Déjà signalé</span>
-                            <button type="submit" class=designaler><a href="http://localhost/mvc-site/index.php?action=cancel_signal_Comments&comment_id=<?= $listComment['id'] ?>&post_id=<?= $listComment['items_id'] ?>" onclick=" return confirm('designaler le commentaire');">Designaler</a></button>
-                        <?php } ?>
+                        <div class="container_comments">
+                            <h5 class="pseudo"><?= htmlspecialchars($listComment["id"]) . ' ' . htmlspecialchars($listComment["pseudo"]); ?></h5><br>
+                            <p class="comment"><?= htmlspecialchars($listComment["commentaire"]) ?></p>
+                            <button type="submit" class=supprimer><a href="http://localhost/isabelle_choppy_4_24122021/index.php?action=cancel_Comments&comment_id=<?= $listComment["id"] ?>" onclick=" return confirm('Confirmer la suppression');">Supprimer</a></button>
+                            <!-- bouton signaler -->
 
-                <?php
+
+                            <?php if ($listComment["signaler"] == 1) { ?>
+                                <span>Déjà signalé</span>
+                                <button type="submit" class=designaler><a href="http://localhost/isabelle_choppy_4_24122021/index.php?action=cancel_signal_Comments&comment_id=<?= $listComment['id'] ?>&post_id=<?= $listComment['items_id'] ?>" onclick=" return confirm('designaler le commentaire');">Designaler</a></button>
+                        </div>
+
+                    <?php } ?>
+            <?php
 
                     }
                 }
-                ?>
+            ?>
             </div>
     </section>
     </div>

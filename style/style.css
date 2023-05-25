@@ -78,6 +78,7 @@ a {
 
 #message {
   margin-top: 100px;
+  font-size: 16px;
 }
 
 /* biographie */
@@ -228,7 +229,7 @@ footer h5 {
   margin-right: 10px;
 }
 
-/*Mise en page posts*/
+/*Mise en page post*/
 
 #contenu2 {
   margin: auto;
@@ -237,21 +238,53 @@ footer h5 {
   background-color: burlywood;
 }
 #contenu2 div.main_container {
-  /* display: flex;
-  justify-content: center; */
-  /* align-items: center;
-  flex-direction: column; */
   margin-top: 100px;
   min-height: calc(100vh - 160px);
   border-radius: 10px;
-  /* gap: unset; */
 }
 
 span {
   margin-top: 20px;
-  margin-left: 44%;
   font-weight: bolder;
   font-size: 20px;
+}
+.contenu2 h1 {
+  margin-left: 20px;
+}
+
+/*Mise en page Post + commentaires*/
+
+.post_contenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  height: 450px;
+  margin-left: 100px;
+  background-color: peru;
+}
+
+.post_contenu h1 {
+  text-align: center;
+  height: 10px;
+}
+.post_contenu span {
+  text-align: center;
+}
+.post_contenu .article {
+  text-align: justify;
+  background-color: white;
+  padding: 10px;
+  width: 70%;
+  margin: auto;
+}
+
+.coms_contenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  background-color: white;
 }
 
 /*tableau de bord*/
@@ -275,9 +308,17 @@ span {
   font-size: 20px;
 }
 
-#contenu2 .pseudo {
-  /* text-align: center; */
-  padding-left: 10px;
+/*commentaires*/
+
+.container_comments {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contenu2 .container_comments .pseudo {
+  padding-left: 30px;
   font-size: 16px;
 }
 
@@ -297,12 +338,14 @@ span {
   color: black;
 }
 
-#contenu2 .comment {
-  text-align: center;
+#contenu2 .container_comments .comment {
+  text-align: justify;
+  padding: 10px;
   margin-top: -65px;
-  margin-left: 100px;
   background-color: #fff;
-  width: 600px;
+  width: 50%;
+  margin-left: 150px;
+  border-radius: 5px;
 }
 
 #contenu2 h2 {
@@ -455,9 +498,6 @@ input.btn.btn-primary {
 }
 #div_form #email,
 #div_form #password {
-  /* margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px; */
   width: 230px;
   height: 45px;
   border-radius: 5px;

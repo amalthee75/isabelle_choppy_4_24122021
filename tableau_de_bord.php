@@ -32,15 +32,15 @@
         <article class=" list-dashboard">
           <p class="article"><?= htmlspecialchars($post['content']); ?></p>
         </article>
-        <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=cancel_post&id=<?= $post['id'] ?>" onclick="return confirm('Confirmer la suppression');">Supprimer</a>
-        <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=form_modify_Post&id=<?= $post['id'] ?>">modifier</a>
+        <a class="link_dashboard" href="http://localhost/isabelle_choppy_4_24122021/index.php?action=cancel_post&id=<?= $post['id'] ?>" onclick="return confirm('Confirmer la suppression');">Supprimer</a>
+        <a class="link_dashboard" href="http://localhost/isabelle_choppy_4_24122021/index.php?action=form_modify_Post&id=<?= $post['id'] ?>">modifier</a>
 
       </div>
 
 
-      <!-- <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=add_Comments=<?= $post['id'] ?>">Signaler</a>
+      <!-- <a class="link_dashboard" href="http://localhost/isabelle_choppy_4_24122021/index.php?action=add_Comments=<?= $post['id'] ?>">Signaler</a>
 
-      <a class="link_dashboard" href="http://localhost/mvc-site/index.php?action=add_Comments" onclick="return confirm('commentaire signalé');"> Signaler</a>
+      <a class="link_dashboard" href="http://localhost/isabelle_choppy_4_24122021/index.php?action=add_Comments" onclick="return confirm('commentaire signalé');"> Signaler</a>
 
       <?php
             }

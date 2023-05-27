@@ -19,7 +19,7 @@
     ?>
     <div id="general">
 
-        <form class="form" action="http://localhost/mvc-site/index.php?action=modify_Post&id=<?= $item['id'] ?>" method="POST">
+        <form class="form" action="http://localhost/isabelle_choppy_4_24122021/index.php?action=modify_Post&id=<?= $item['id'] ?>" method="POST">
             <input type="text" id="title" name="title" value="<?= $item['title'] ?>" />
             <br>
             <textarea name="content" id="content" cols="30" rows="10"><?= $item['content'] ?></textarea>

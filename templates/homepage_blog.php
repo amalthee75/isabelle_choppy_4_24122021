@@ -8,6 +8,7 @@
     <title>Blog_ecrivain</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/style.css">
+    <script src="main.js"></script>
 </head>
 
 <body>
@@ -31,10 +32,7 @@
             <?php foreach ($posts as $post) { ?>
                 <article class="article">
                     <p class="date"><?= $post["date_creation"] ?></p>
-                    <h5><a href="http://localhost/isabelle_choppy_4_24122021/index.php?action=post&id=id">LA LUNE</a></h5>
-
-                    <!-- <a href="http://localhost//isabelle_choppy_4_24122021/index.php?action=<?= $post["title"] ?>"> -->
-                    <!-- <a href="http://localhost/isabelle_choppy_4_24122021/index.php?action=form_modify_Post&id=19">  -->
+                    <h5><a href="http://localhost/isabelle_choppy_4_24122021/index.php?action=post&id=<?= $post["id"] ?>"><?= $post["title"] ?></a></h5>
 
                     <p class="description"><?= $post["content"] ?></p>
                     <p class="auteur">Jean Forteroche</p>

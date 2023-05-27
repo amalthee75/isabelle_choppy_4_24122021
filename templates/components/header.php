@@ -18,10 +18,7 @@
     </nav>
 
 </header>
-<script src="main.js"></script>
 
-
-<script src="main.js"></script>
 <!-- <div id="message">
     <?php //include('./templates/components/message.php');
     ?>

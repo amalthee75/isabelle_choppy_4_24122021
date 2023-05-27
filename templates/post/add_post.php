@@ -51,7 +51,7 @@
 
     ?>
     <div class="main_container">
-        <form class="form" action="http://localhost/mvc-site/index.php?action=add_post" method="POST">
+        <form class="form" action="http://localhost/isabelle_choppy_4_24122021/index.php?action=add_post" method="POST">
             <input type="text" id="title" name="title" placeholder="titre" />
             <input type="submit" id="envoyer">
 

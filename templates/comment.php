@@ -24,7 +24,7 @@
                     foreach ($listComments as $listComment) {
                 ?>
                         <div class="container_comments">
-                            <h5 class="pseudo"><?= htmlspecialchars($listComment["id"]) . ' ' . htmlspecialchars($listComment["pseudo"]); ?></h5><br>
+                            <h5 class="pseudo"><?= htmlspecialchars($listComment["id"]) . ' ' . htmlspecialchars($listComment["pseudo"]); ?></h5>
                             <p class="comment"><?= htmlspecialchars($listComment["commentaire"]) ?></p>
                             <button type="submit" class=supprimer><a href="http://localhost/isabelle_choppy_4_24122021/index.php?action=cancel_Comments&comment_id=<?= $listComment["id"] ?>" onclick=" return confirm('Confirmer la suppression');">Supprimer</a></button>
                             <!-- bouton signaler -->

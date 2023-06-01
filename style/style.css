@@ -54,7 +54,7 @@ a {
 }
 
 .nav-link {
-  font-size: 20px;
+  font-size: 16px;
   transition: 0.7s ease;
 }
 .nav-link:hover {
@@ -77,7 +77,7 @@ a {
 }
 
 #message {
-  margin-top: 100px;
+  margin-top: -50px;
   font-size: 16px;
 }
 
@@ -356,12 +356,13 @@ textarea {
   padding: 10px;
 }
 #contenu2 .main_container #title {
+  display: flex;
   border: 3px solid black;
   border-style: inset;
   width: 400px;
   height: 50px;
   margin: auto;
-  text-align: center;
+  flex-direction: column;
   padding-top: 20px;
   font-size: 20px;
 }
@@ -369,6 +370,7 @@ textarea {
 /*commentaires*/
 
 .container_comments {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -376,8 +378,10 @@ textarea {
 }
 
 #contenu2 .container_comments .pseudo {
-  padding-left: 30px;
-  font-size: 16px;
+  margin-left: 150px;
+  width: 150px;
+  font-size: 18px;
+  text-align: left;
 }
 
 .supprimer {
@@ -397,12 +401,13 @@ textarea {
 }
 
 #contenu2 .container_comments .comment {
+  margin-left: 50%;
+  transform: translate(-50%);
   text-align: justify;
   padding: 10px;
   margin-top: -65px;
   background-color: #fff;
   width: 50%;
-  margin-left: 150px;
   border-radius: 5px;
 }
 
@@ -411,22 +416,24 @@ textarea {
 }
 
 /*formulaire*/
-.form {
-  margin-left: auto;
-  margin-top: 150px;
-  max-width: 600px;
+.main_container .form {
+  margin-left: 50%;
+  transform: translate(-50%);
+  justify-content: center;
+  margin-top: 120px;
+  max-width: 550px;
 }
 
 #title {
-  height: 35px;
+  height: 40px;
   width: 150px;
   border-radius: 3px;
   text-align: center;
   font-size: 16px;
 }
 #envoyer {
-  height: 35px;
-  width: 135px;
+  height: 45px;
+  width: 156px;
   border-radius: 3px;
   text-align: center;
   font-size: 14px;
@@ -475,24 +482,24 @@ textarea {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  height: 50px;
 }
 #header_cadre2 {
   display: flex;
   align-items: center;
   height: 50px;
   padding-top: 10px;
+  gap: 50px;
 }
 
 #header_cadre .title_dashboard {
   color: black;
   margin-top: 35px;
-  padding-right: 20px;
   font-size: 20px;
 }
 
 .date_dashboard {
   margin-top: 20px;
-
   color: black;
   width: 100px;
   font-weight: bold;
@@ -502,6 +509,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  align-items: flex-end;
 }
 
 .link_dashboard {
@@ -509,7 +517,6 @@ textarea {
   color: black;
   text-decoration: none;
   font-size: 16px;
-  margin-left: 20px;
 }
 
 /*Formulaire de connexion */
@@ -580,6 +587,12 @@ textarea {
 /*header*/
 
 @media screen and (max-width: 900px) {
+  .main_container .form {
+    margin-top: 170px;
+  }
+}
+
+@media screen and (max-width: 900px) {
   header {
     display: flex;
     flex-direction: row;
@@ -631,7 +644,7 @@ textarea {
     transform: translateY() rotate();
   }
   .nav-menu {
-    position: absolute;
+    position: fixed;
     top: 40px;
     gap: 0;
     padding: 2px;

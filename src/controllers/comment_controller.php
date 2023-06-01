@@ -3,7 +3,7 @@
 function commentController_showComment()
 {
   // $commentModel->getAllComments();
-  echo 'Tous les commentaires sont affichés' . '<br>';
+  // echo 'Tous les commentaires sont affichés' . '<br>';
 
   // $commentModel->connexion_db();
   $commentModel = new Comment();

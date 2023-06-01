@@ -342,7 +342,8 @@ input.btn.btn-primary {
 
 textarea {
   width: 200px;
-  height: 60px;
+  height: 100px;
+  font-size: 18px;
 }
 
 /*tableau de bord*/
@@ -421,7 +422,8 @@ textarea {
   transform: translate(-50%);
   justify-content: center;
   margin-top: 120px;
-  max-width: 550px;
+  max-width: 600px;
+  height: 330px;
 }
 
 #title {
@@ -565,21 +567,45 @@ textarea {
   font-size: 16px;
 }
 
+/*modifier post*/
+
+.form #submit {
+  width: 50px;
+  height: 42px;
+  background-color: rgb(89, 138, 243);
+  color: white;
+  font-size: 20px;
+  margin-top: -20px;
+  border: 1px solid rgb(89, 138, 243);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.contenu2 {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  text-align: justify;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+
 /*Messages de confirmation et d'erreur*/
 
 .success {
   color: green;
-  /* text-align: center;
-  font-weight: bold; */
+  text-align: center;
   font-size: 18px;
+  font-weight: bold;
   margin-top: 100px;
 }
 
 .error {
   color: red;
-  /* text-align: center;
-  font-weight: bold; */
+  text-align: center;
+  font-weight: bold;
   font-size: 18px;
+  margin-top: 100px;
 }
 
 /*responsive*/

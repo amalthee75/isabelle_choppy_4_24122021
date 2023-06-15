@@ -69,6 +69,7 @@ class Comment extends Model
          return true;
       } else {
          $request = 1;
+         $_SESSION["error"] = "Message supprimé";
          return false;
       }
    }

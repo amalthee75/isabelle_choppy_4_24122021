@@ -76,11 +76,11 @@ function commentController_deleteComment($comment_id)
   $commentModel = new Comment();
   $suppression = $commentModel->commmentModel_deleteComment($comment_id);
 
-  if ($suppression) {
-    // var_dump($comments);
+  if (!$suppression) {
+
     $_SESSION["success"] = "Commentaires supprimés";
   } else {
-    $_SESSION["error"] = "Erreur : de suppression du commentaire";
+    $_SESSION["error"] = "Erreur: commentaires non supprimés";
   }
 
   header("Location: http://localhost/isabelle_choppy_4_24122021/index.php?action=show_Comments");

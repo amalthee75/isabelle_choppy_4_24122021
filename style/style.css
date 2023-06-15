@@ -360,11 +360,13 @@ textarea {
   display: flex;
   border: 3px solid black;
   border-style: inset;
-  width: 400px;
+  width: 50%;
   height: 50px;
   margin: auto;
   flex-direction: column;
   padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 20px;
 }
 
@@ -379,17 +381,19 @@ textarea {
 }
 
 #contenu2 .container_comments .pseudo {
-  margin-left: 150px;
+  padding-left: 50px;
   width: 150px;
   font-size: 18px;
   text-align: left;
 }
 
 .supprimer {
+  padding-top: 5px;
+  display: flex;
   height: 35px;
-  width: 130px;
+  width: 100px;
   text-decoration: none;
-  margin-left: 40%;
+  margin-left: 24%;
   border-radius: 3px;
   font-size: 16px;
   font-weight: bolder;
@@ -616,6 +620,9 @@ div.contenu2 {
   .main_container .form {
     margin-top: 170px;
   }
+  #contenu2 .container_comments .comment {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -698,5 +705,8 @@ div.contenu2 {
   }
   #form_connexion h1 {
     text-align: center;
+  }
+  #contenu2 .main_container #title {
+    font-size: 16px;
   }
 }
